@@ -1,0 +1,14 @@
+version: '3.8'
+
+networks:
+  k6:
+
+services:
+  k6:
+    build: .
+    networks:
+      - k6
+    ports:
+      - "6565:6565"
+    volumes:
+      - ./scripts:/scripts:rw
